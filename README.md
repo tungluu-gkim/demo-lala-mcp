@@ -1,1 +1,51 @@
-IyBkZW1vLWxhbGEtbWNwCgpBIHNpbXBsZSBQeXRob24gdXRpbGl0eSB0byB0ZXN0IGFuZCB2ZXJpZnkgUG9zdGdyZVNRTCBkYXRhYmFzZSBjb25uZWN0aXZpdHkuIFVzZWZ1bCBmb3IgcXVpY2tseSBjaGVja2luZyBpZiB5b3VyIGRhdGFiYXNlIHNlcnZlciBpcyBhY2Nlc3NpYmxlIGJlZm9yZSBkZXBsb3lpbmcgYW4gYXBwbGljYXRpb24uCgojIyBSZXF1aXJlbWVudHMKCi0gUHl0aG9uIDMuNisKLSBQb3N0Z3JlU1FMIHNlcnZlcgotIGBwc3ljb3BnMmAgbGlicmFyeQoKIyMgSW5zdGFsbGF0aW9uCgoxLiBDbG9uZSB0aGlzIHJlcG9zaXRvcnk6CgpgYGBiYXNoCmdpdCBjbG9uZSBodHRwczovL2dpdGh1Yi5jb20vdHVuZ2x1dS1na2ltL2RlbW8tbGFsYS1tY3AuZ2l0CmNkIGRlbW8tbGFsYS1tY3AKYGBgCgoyLiBJbnN0YWxsIHRoZSByZXF1aXJlZCBkZXBlbmRlbmN5OgoKYGBgYmFzaApwaXAgaW5zdGFsbCBwc3ljb3BnMgpgYGAKCiMjIFVzYWdlCgoxLiBPcGVuIGB0ZXN0LnB5YCBhbmQgdXBkYXRlIHRoZSBkYXRhYmFzZSBjcmVkZW50aWFsczoKCmBgYHB5dGhvbgpEQl9IT1NUID0gJ2xvY2FsaG9zdCcgICAgICAjIFlvdXIgUG9zdGdyZVNRTCBob3N0CkRCX05BTUUgPSAnZG5haWNvbnNvbGUnICAgIyBZb3VyIGRhdGFiYXNlIG5hbWUKREJfVVNFUiA9ICd1c2VyJyAgICAgICAgICAgIyBZb3VyIGRhdGFiYXNlIHVzZXIKREJfUEFTU1dPUkQgPSAncGFzc3dvcmQnICAgIyBZb3VyIGRhdGFiYXNlIHBhc3N3b3JkCkRCX1BPUlQgPSA1NDMyICAgICAgICAgICAgICMgWW91ciBQb3N0Z3JlU1FMIHBvcnQKYGBgCgoyLiBSdW4gdGhlIHNjcmlwdDoKCmBgYGJhc2gKcHl0aG9uIHRlc3QucHkKYGBgCgozLiBJZiBzdWNjZXNzZnVsLCB5b3Ugd2lsbCBzZWU6CgpgYGAKQ29ubmVjdGluZyB0byB0aGUgUG9zdGdyZVNRTCBkYXRhYmFzZSBhdCBsb2NhbGhvc3Q6NTQzMi4uLgpDb25uZWN0aW9uIHN1Y2Nlc3NmdWwhClBvc3RncmVTUUwgZGF0YWJhc2UgdmVyc2lvbjogKCdQb3N0Z3JlU1FMIDE0LjEgLi4uJywpCkRhdGFiYXNlIGNvbm5lY3Rpb24gY2xvc2VkLgpgYGAK
+# demo-lala-mcp
+
+A simple Python utility to test and verify PostgreSQL database connectivity. Useful for quickly checking if your database server is accessible before deploying an application.
+
+## Requirements
+
+- Python 3.6+
+- PostgreSQL server
+- `psycopg2` library
+
+## Installation
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/tungluu-gkim/demo-lala-mcp.git
+cd demo-lala-mcp
+```
+
+2. Install the required dependency:
+
+```bash
+pip install psycopg2
+```
+
+## Usage
+
+1. Open `test.py` and update the database credentials:
+
+```python
+DB_HOST = 'localhost'      # Your PostgreSQL host
+DB_NAME = 'dnaiconsole'   # Your database name
+DB_USER = 'user'           # Your database user
+DB_PASSWORD = 'password'   # Your database password
+DB_PORT = 5432             # Your PostgreSQL port
+```
+
+2. Run the script:
+
+```bash
+python test.py
+```
+
+3. If successful, you will see:
+
+```
+Connecting to the PostgreSQL database at localhost:5432...
+Connection successful!
+PostgreSQL database version: ('PostgreSQL 14.1 ...',)
+Database connection closed.
+```
